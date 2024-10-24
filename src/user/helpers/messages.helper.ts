@@ -5,4 +5,5 @@ export const UserMessagesHelper = {
   REGISTER_PASSWORD_NOT_VALID:
     'Password informado não é válido! Ela necessita ter de 4 a 12 caracteres e conter pelo menos um caracter maiúsculo, um minúsculo e um caractére especial!',
   REGISTER_EXIST_EMAIL_ACCOUNT: 'Já existe uma conta com o e-mail informado!',
+  GET_USER_NOT_FOUND: 'Usuário não encontrado!',
 };
