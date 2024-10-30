@@ -4,6 +4,7 @@ import { User, UserDocument } from './schemas/user.schema';
 import { Model } from 'mongoose';
 import { RegisterDTO } from './dtos/register.dto';
 import * as CryptoJs from 'crypto-js';
+import { UpdateUserDto } from './dtos/updateuser.dto';
 @Injectable()
 export class UserService {
   constructor(
@@ -51,5 +52,9 @@ export class UserService {
 
   async getUserById(id: string) {
     return await this.UserModel.findById(id);
+  }
+
+  async updateUser(id: string, dto: UpdateUserDto) {
+    return await this.UserModel.findByIdAndUpdate(id, dto);
   }
 }
